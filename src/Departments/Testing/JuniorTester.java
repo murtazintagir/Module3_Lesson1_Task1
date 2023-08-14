@@ -9,7 +9,7 @@ public class JuniorTester extends Trainees implements Hierarchy, Trainee {
 
     @Override
     public String toString() {
-        return "JuniorTester{" +
+        return "JuniorDeveloper{" +
                 "department='" + department + '\'' +
                 '}';
     }

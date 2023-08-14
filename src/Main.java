@@ -2,12 +2,12 @@ import Departments.Development.JuniorDeveloper;
 import Departments.Testing.JuniorTester;
 import Departments.Testing.MiddleTester;
 import Departments.Testing.SeniorTester;
-import Departments.Trainees;
 import Hierarchy.Trainee;
 
 public class Main {
 
-    public static Trainee changeDepartment(Trainee test, boolean b) {
+    public static Trainee changeDepartment(boolean b) {
+        Trainee test;
         if (b) {
             test = new JuniorTester();
         } else {
@@ -16,7 +16,8 @@ public class Main {
         return test;
     }
 
-    public static JuniorTester changeState(JuniorTester empl, boolean a, boolean b) {
+    public static JuniorTester changeState(boolean a, boolean b) {
+        JuniorTester empl;
         if (a && b) {
             empl = new SeniorTester();
         } else if (a || b) {
@@ -28,29 +29,11 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Trainee test = new Trainees();
-//        int st = changeState(true, true);
-//        int a = 3;
-//        test = getTrainee(test, st);
-//        test.getSalary();
-        test = changeDepartment(test, true);
-        System.out.println(test.getClass());
-        test = changeState((JuniorTester) test, true, true);
+        Trainee test;
+        test = changeDepartment(true);
+        test = changeState(true, false);
         test.getSalary();
-    }
-
-    private static Trainee getTrainee(Trainee test, int st) {
-        switch (st) {
-            case 1:
-                test = new JuniorTester();
-                break;
-            case 2:
-                test = new MiddleTester();
-                break;
-            case 3:
-                test = new SeniorTester();
-                break;
-        }
-        return test;
+        test = changeState(true, true);
+        test.getSalary();
     }
 }
