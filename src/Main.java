@@ -20,9 +20,9 @@ public class Main {
     public static Junior changeState(boolean a, boolean b) {
         Junior empl;
         if (a && b) {
-            empl = new SeniorTester("Тестирование", "Тестирование");
+            empl = new SeniorTester();
         } else if (a || b) {
-            empl = new MiddleTester("Тестирование");
+            empl = new MiddleTester();
         } else {
             empl = new JuniorTester("Тестирование");
         }
@@ -35,6 +35,7 @@ public class Main {
         test = changeDepartment(true);
         System.out.println(test.getDepart());
         test = changeState(true, false);
+        System.out.println(test.toString());
         System.out.println(test.getDepart());
         test.getSalary();
         test = changeState(true, true);
