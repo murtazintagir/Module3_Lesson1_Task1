@@ -1,11 +1,27 @@
 package Departments.Testing;
 
-import Departments.Trainees;
+import Departments.Junior;
 import Hierarchy.Hierarchy;
 import Hierarchy.Trainee;
 
-public class JuniorTester extends Trainees implements Hierarchy, Trainee {
-    String department = "Тестирование";
+public class JuniorTester extends Junior implements Hierarchy, Trainee {
+    String department;
+
+    public JuniorTester(String department) {
+        this.department = department;
+    }
+
+    public JuniorTester() {
+    }
+
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
 
     @Override
     public String toString() {
