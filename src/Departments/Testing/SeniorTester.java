@@ -1,18 +1,25 @@
 package Departments.Testing;
 
-public class SeniorTester extends MiddleTester {
+import Departments.Junior;
+import Hierarchy.Hierarchy;
+import Hierarchy.Trainee;
+
+public class SeniorTester extends Junior implements Hierarchy, Trainee {
     String department;
 
-    @Override
+    public SeniorTester(String department) {
+        this.department = department;
+    }
+
     public String getDepartment() {
         return department;
     }
 
     public void setDepartment(String department) {
-        this.department = super.department;
+        this.department = department;
     }
 
-    @Override
+
     public void getSalary() {
         System.out.println(2.5);
     }

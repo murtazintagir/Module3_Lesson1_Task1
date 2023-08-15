@@ -1,4 +1,8 @@
 package Departments.Development;
 
-public class MiddleDeveloper extends SeniorDeveloper {
+import Departments.Junior;
+import Hierarchy.Hierarchy;
+import Hierarchy.Trainee;
+
+public class MiddleDeveloper extends Junior implements Hierarchy, Trainee {
 }

@@ -1,14 +1,20 @@
 package Departments;
 
 public class Junior extends Trainees {
-    private String depart;
+    private String department;
 
-    @Override
-    public String getDepart() {
-        return depart;
+    public Junior(String depart) {
+        this.department = depart;
     }
 
-    public void setDepart(String depart) {
-        this.depart = depart;
+    public Junior() {
+    }
+
+    public void setDepart(String department) {
+        this.department = department;
+    }
+
+    public String getDepartment() {
+        return department;
     }
 }

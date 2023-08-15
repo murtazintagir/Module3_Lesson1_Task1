@@ -11,10 +11,7 @@ public class JuniorTester extends Junior implements Hierarchy, Trainee {
         this.department = department;
     }
 
-    public JuniorTester() {
-    }
-
-
+    
     public String getDepartment() {
         return department;
     }

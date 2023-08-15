@@ -11,7 +11,7 @@ public class Trainees implements Trainee {
     }
 
     @Override
-    public String getDepart() {
+    public String getDepartment() {
         return depart;
     }
 }
