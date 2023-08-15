@@ -5,13 +5,13 @@ import Hierarchy.Hierarchy;
 import Hierarchy.Trainee;
 
 public class JuniorTester extends Junior implements Hierarchy, Trainee {
-    String department;
+    private String department;
 
     public JuniorTester(String department) {
         this.department = department;
     }
 
-    
+    @Override
     public String getDepartment() {
         return department;
     }
@@ -21,14 +21,16 @@ public class JuniorTester extends Junior implements Hierarchy, Trainee {
     }
 
     @Override
+    public void getSalary() {
+        System.out.println(1.0);
+    }
+
+    @Override
     public String toString() {
         return "JuniorDeveloper{" +
                 "department='" + department + '\'' +
                 '}';
     }
 
-    @Override
-    public void getSalary() {
-        System.out.println(1.0);
-    }
+
 }

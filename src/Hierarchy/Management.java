@@ -1,9 +1,14 @@
 package Hierarchy;
 
 public abstract class Management implements Hierarchy {
-    private double salary;
+    private String depart;
 
-    public Management(double salary) {
-        this.salary = salary;
+    public void getSalary() {
+        System.out.println(0.5);
+    }
+
+    @Override
+    public String getDepartment() {
+        return depart;
     }
 }
