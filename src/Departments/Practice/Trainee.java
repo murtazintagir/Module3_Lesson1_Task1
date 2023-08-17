@@ -1,8 +1,6 @@
-package Departments;
+package Departments.Practice;
 
-import Hierarchy.Trainee;
-
-public class Trainees implements Trainee {
+public class Trainee implements Hierarchy.Trainee {
 
     private String depart;
 

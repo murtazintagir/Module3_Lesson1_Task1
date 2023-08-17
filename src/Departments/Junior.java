@@ -1,6 +1,8 @@
 package Departments;
 
-public class Junior extends Trainees {
+import Departments.Practice.Trainee;
+
+public class Junior extends Trainee {
     private String department;
 
     public Junior(String depart) {

@@ -7,6 +7,12 @@ import Hierarchy.Trainee;
 
 public class Main {
 
+    public static Junior addEmpl(String department) {
+        Junior empl;
+        empl = new JuniorTester("Тестирование");
+        return empl;
+    }
+
     public static Junior changeDepartment(boolean b) {
         Junior empl;
         if (b) {
@@ -31,20 +37,9 @@ public class Main {
 
     public static void main(String[] args) {
         Trainee test1;
+        test1 = new JuniorTester("Тестирование");
 
-        test1 = changeDepartment(true);
-        System.out.println(test1.getDepartment());
-        test1 = changeState(true, false);
-        System.out.println(test1.getDepartment());
-        test1.getSalary();
-        test1 = changeState(true, true);
-        test1.getSalary();
-        System.out.println(test1.getDepartment());
-
-        Trainee test2;
-
-        test2 = changeDepartment(false);
-        System.out.println(test2.getDepartment());
 
     }
 }
+
